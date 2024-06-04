@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "693e",
+      "username": "AarFeE",
+      "birth_date": "2001-05-04",
+      "email": "aarfee@email.com",
+      "password": "testtest",
+      "isAdmin": 1
+    },
+    {
+      "id": "a0f1",
+      "username": "test",
+      "birth_date": "2024-05-28",
+      "email": "test@test.com",
+      "password": "testtest",
+      "isAdmin": 0
+    }
+  ],
+  "flights": [],
+  "reservations": []
+}
