@@ -30,3 +30,5 @@
 # ### User Challenges
 
 # GET http://localhost:3000/user_challenge?userId=1&_embed=challenge
+
+GET http://localhost:3000/flights

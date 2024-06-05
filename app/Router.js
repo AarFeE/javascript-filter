@@ -2,8 +2,9 @@ import { PageLayoutScene } from "./components/page-layout.scene";
 import { routes } from "./routes";
 import { NotFoundScene } from "./scenes/not-found/not-found.scene";
 
-export function Router() {
+export async function Router() {
     const path = window.location.pathname;
+    const params = new URLSearchParams(window.location.search);
     const publicRoute = routes.public.find((route) => route.path === path);
     const privateRoute = routes.private.find((route) => route.path === path);
     const adminRoute = routes.admin.find((route) => route.path === path);
@@ -20,16 +21,15 @@ export function Router() {
             navigateTo('/login');
             return;
         }
-        let { pageContent, logic } = privateRoute.scene();
+        const { pageContent, logic } = privateRoute.scene();
         PageLayoutScene(pageContent, logic);
         return;
     } else if (adminRoute) {
         if (localStorage.getItem('user') === null || JSON.parse(localStorage.getItem('user')).isAdmin !== 1) {
-            console.log(JSON.parse(localStorage.getItem('user')).isAdmin);
             navigateTo('/');
             return;
         }
-        let { pageContent, logic } = adminRoute.scene();
+        const { pageContent, logic } = await adminRoute.scene(params);
         PageLayoutScene(pageContent, logic);
         return;
     }

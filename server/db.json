@@ -15,8 +15,63 @@
       "email": "test@test.com",
       "password": "testtest",
       "isAdmin": 0
+    },
+    {
+      "id": "6b36",
+      "username": "daniel",
+      "birth_date": "2024-06-12",
+      "email": "daniel@email.com",
+      "password": "testtest",
+      "isAdmin": 0
     }
   ],
-  "flights": [],
-  "reservations": []
+  "flights": [
+    {
+      "id": "23ff",
+      "number": "123",
+      "origin": "JFK",
+      "destination": "LAX",
+      "departure": "2024-06-01",
+      "arrival": "2024-06-30",
+      "capacity": "32423"
+    },
+    {
+      "id": "96df",
+      "number": "321",
+      "origin": "JFK",
+      "destination": "LAX",
+      "departure": "2024-06-04",
+      "arrival": "2024-06-05",
+      "capacity": "21312"
+    },
+    {
+      "id": "02c3",
+      "number": "3242343",
+      "origin": "saddfhf",
+      "destination": "efdhgv",
+      "departure": "2024-06-02",
+      "arrival": "2024-07-03",
+      "capacity": "2"
+    }
+  ],
+  "reservations": [
+    {
+      "id": "359c",
+      "flightId": "23ff",
+      "userId": "a0f1",
+      "creationDate": "2024-06-05T17:01:47.717Z"
+    },
+    {
+      "id": "a70d",
+      "flightId": "02c3",
+      "userId": "a0f1",
+      "creationDate": "2024-06-05T17:01:51.779Z"
+    },
+    {
+      "id": "7c78",
+      "flightId": "02c3",
+      "userId": "a0f1",
+      "creationDate": "2024-06-05T17:01:54.364Z"
+    }
+  ]
 }

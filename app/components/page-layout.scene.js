@@ -3,16 +3,13 @@ import styles from "./page-layout.styles.css"
 
 export function PageLayoutScene(pageContent, logic) {
     const isAdmin = Boolean(JSON.parse(localStorage.getItem('user')).isAdmin);
-    console.log(isAdmin);
     const root = document.getElementById('root');
     root.innerHTML = `
         <header>
             <nav class="${styles.navbar}">
-                <p id="logoBtn">My Filter SPA</p>
-                ${isAdmin ? `
-                <p id="reservationsBtn" class="${styles.nav_btn}">Reservations</p>
+                <p id="logoBtn" class="${styles.nav_btn}">My Filter SPA</p>
                 <p id="flightsBtn" class="${styles.nav_btn}">Flights</p>
-                ` : ''}
+                <p id="reservationsBtn" class="${styles.nav_btn}">Reservations</p>
                 <p id="logoutBtn" class="${styles.nav_btn}">LogOut</p>
             </nav>
         </header>
